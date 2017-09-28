@@ -11,9 +11,13 @@ import XCTest
 
 class NetworkUnitTestingTests: XCTestCase {
     
+    var httpClient: HttpClient!
+    let session = MockURLSession()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        httpClient = HttpClient(session)
     }
     
     override func tearDown() {
@@ -33,4 +37,15 @@ class NetworkUnitTestingTests: XCTestCase {
         }
     }
     
+    
+    func testGetRequestWithURL() {
+        guard let url = URL(string: "https://mockurl") else {
+            fatalError("URL can't be empty")
+        }
+        httpClient.get(url: url) { (success, response) in
+            // Return data
+        }
+        // Assert
+        XCTAssert(session.lastURL == url)
+    }
 }

@@ -15,6 +15,11 @@
 		EDD8F35F1F7CF8F000E53527 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD8F35D1F7CF8F000E53527 /* LaunchScreen.storyboard */; };
 		EDD8F36A1F7CF8F000E53527 /* NetworkUnitTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3691F7CF8F000E53527 /* NetworkUnitTestingTests.swift */; };
 		EDD8F3751F7CF8F000E53527 /* NetworkUnitTestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3741F7CF8F000E53527 /* NetworkUnitTestingUITests.swift */; };
+		EDD8F3831F7CF97B00E53527 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3821F7CF97B00E53527 /* HttpClient.swift */; };
+		EDD8F3851F7CFE7700E53527 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3841F7CFE7700E53527 /* MockURLSession.swift */; };
+		EDD8F3871F7CFF2B00E53527 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3861F7CFF2B00E53527 /* MockURLSessionDataTask.swift */; };
+		EDD8F3891F7D00DD00E53527 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3881F7D00DD00E53527 /* Protocols.swift */; };
+		EDD8F38B1F7D01A600E53527 /* URLSession+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F38A1F7D01A600E53527 /* URLSession+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		EDD8F3701F7CF8F000E53527 /* NetworkUnitTestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkUnitTestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD8F3741F7CF8F000E53527 /* NetworkUnitTestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUnitTestingUITests.swift; sourceTree = "<group>"; };
 		EDD8F3761F7CF8F000E53527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDD8F3821F7CF97B00E53527 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		EDD8F3841F7CFE7700E53527 /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		EDD8F3861F7CFF2B00E53527 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		EDD8F3881F7D00DD00E53527 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		EDD8F38A1F7D01A600E53527 /* URLSession+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,11 @@
 				EDD8F35D1F7CF8F000E53527 /* LaunchScreen.storyboard */,
 				EDD8F3601F7CF8F000E53527 /* Info.plist */,
 				EDD8F3581F7CF8F000E53527 /* NetworkUnitTesting.xcdatamodeld */,
+				EDD8F3821F7CF97B00E53527 /* HttpClient.swift */,
+				EDD8F3841F7CFE7700E53527 /* MockURLSession.swift */,
+				EDD8F3861F7CFF2B00E53527 /* MockURLSessionDataTask.swift */,
+				EDD8F3881F7D00DD00E53527 /* Protocols.swift */,
+				EDD8F38A1F7D01A600E53527 /* URLSession+Ext.swift */,
 			);
 			path = NetworkUnitTesting;
 			sourceTree = "<group>";
@@ -196,6 +211,7 @@
 				TargetAttributes = {
 					EDD8F34D1F7CF8EF00E53527 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = UD98N48YL7;
 						ProvisioningStyle = Automatic;
 					};
 					EDD8F3641F7CF8F000E53527 = {
@@ -262,8 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD8F3891F7D00DD00E53527 /* Protocols.swift in Sources */,
 				EDD8F3541F7CF8F000E53527 /* ViewController.swift in Sources */,
+				EDD8F38B1F7D01A600E53527 /* URLSession+Ext.swift in Sources */,
 				EDD8F3521F7CF8F000E53527 /* AppDelegate.swift in Sources */,
+				EDD8F3831F7CF97B00E53527 /* HttpClient.swift in Sources */,
+				EDD8F3871F7CFF2B00E53527 /* MockURLSessionDataTask.swift in Sources */,
+				EDD8F3851F7CFE7700E53527 /* MockURLSession.swift in Sources */,
 				EDD8F35A1F7CF8F000E53527 /* NetworkUnitTesting.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UD98N48YL7;
 				INFOPLIST_FILE = NetworkUnitTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namdv.NetworkUnitTesting;
@@ -430,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UD98N48YL7;
 				INFOPLIST_FILE = NetworkUnitTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namdv.NetworkUnitTesting;
