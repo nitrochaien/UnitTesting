@@ -15,5 +15,3 @@ class MockURLSessionDataTask: URLSessionDataTaskProtocol {
         resumeWasCalled = true
     }
 }
-
-extension URLSessionDataTask: URLSessionDataTaskProtocol {}

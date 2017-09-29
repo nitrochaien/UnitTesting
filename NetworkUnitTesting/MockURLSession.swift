@@ -15,10 +15,7 @@ class MockURLSession: URLSessionProtocol {
     
     private (set) var lastURL: URL?
     
-    func successHttpURLResponse(request: URLRequest) -> URLResponse {
-        return HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: "HTTP/1.1", headerFields: nil)!
-    }
-    
+    //URLSessionProtocol
     func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol {
         lastURL = request.url
         
@@ -26,4 +23,8 @@ class MockURLSession: URLSessionProtocol {
         return nextDataTask
     }
     
+    func successHttpURLResponse(request: URLRequest) -> URLResponse {
+        //create fake reponse
+        return HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: "HTTP/1.1", headerFields: nil)!
+    }
 }

@@ -34,6 +34,7 @@ class NetworkUnitTestingTests: XCTestCase {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
+            
         }
     }
     
@@ -47,5 +48,34 @@ class NetworkUnitTestingTests: XCTestCase {
         }
         // Assert
         XCTAssert(session.lastURL == url)
+    }
+    
+    func testGetResumeCalled() {
+        
+        let dataTask = MockURLSessionDataTask()
+        session.nextDataTask = dataTask
+        
+        guard let url = URL(string: "https://mockurl") else {
+            fatalError("URL can't be empty")
+        }
+        
+        httpClient.get(url: url) { (success, response) in
+            // Return data
+        }
+        
+        XCTAssert(dataTask.resumeWasCalled)
+    }
+    
+    func testGetShouldReturnData() {
+        let expectedData = "{}".data(using: .utf8)
+        
+        session.nextData = expectedData
+        
+        var actualData: Data?
+        httpClient.get(url: URL(string: "http://mockurl")!) { (data, error) in
+            actualData = data
+        }
+        
+        XCTAssertNotNil(actualData)
     }
 }

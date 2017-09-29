@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED6EA41A1F7DDEE50011C820 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6EA4191F7DDEE50011C820 /* URLSessionDataTaskProtocol.swift */; };
 		EDD8F3521F7CF8F000E53527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3511F7CF8F000E53527 /* AppDelegate.swift */; };
 		EDD8F3541F7CF8F000E53527 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3531F7CF8F000E53527 /* ViewController.swift */; };
 		EDD8F3571F7CF8F000E53527 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD8F3551F7CF8F000E53527 /* Main.storyboard */; };
@@ -18,8 +19,7 @@
 		EDD8F3831F7CF97B00E53527 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3821F7CF97B00E53527 /* HttpClient.swift */; };
 		EDD8F3851F7CFE7700E53527 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3841F7CFE7700E53527 /* MockURLSession.swift */; };
 		EDD8F3871F7CFF2B00E53527 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3861F7CFF2B00E53527 /* MockURLSessionDataTask.swift */; };
-		EDD8F3891F7D00DD00E53527 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3881F7D00DD00E53527 /* Protocols.swift */; };
-		EDD8F38B1F7D01A600E53527 /* URLSession+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F38A1F7D01A600E53527 /* URLSession+Ext.swift */; };
+		EDD8F3891F7D00DD00E53527 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F3881F7D00DD00E53527 /* URLSessionProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED6EA4191F7DDEE50011C820 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		EDD8F34E1F7CF8F000E53527 /* NetworkUnitTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkUnitTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD8F3511F7CF8F000E53527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD8F3531F7CF8F000E53527 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +58,7 @@
 		EDD8F3821F7CF97B00E53527 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		EDD8F3841F7CFE7700E53527 /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		EDD8F3861F7CFF2B00E53527 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
-		EDD8F3881F7D00DD00E53527 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		EDD8F38A1F7D01A600E53527 /* URLSession+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Ext.swift"; sourceTree = "<group>"; };
+		EDD8F3881F7D00DD00E53527 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +119,8 @@
 				EDD8F3821F7CF97B00E53527 /* HttpClient.swift */,
 				EDD8F3841F7CFE7700E53527 /* MockURLSession.swift */,
 				EDD8F3861F7CFF2B00E53527 /* MockURLSessionDataTask.swift */,
-				EDD8F3881F7D00DD00E53527 /* Protocols.swift */,
-				EDD8F38A1F7D01A600E53527 /* URLSession+Ext.swift */,
+				EDD8F3881F7D00DD00E53527 /* URLSessionProtocol.swift */,
+				ED6EA4191F7DDEE50011C820 /* URLSessionDataTaskProtocol.swift */,
 			);
 			path = NetworkUnitTesting;
 			sourceTree = "<group>";
@@ -278,9 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDD8F3891F7D00DD00E53527 /* Protocols.swift in Sources */,
+				EDD8F3891F7D00DD00E53527 /* URLSessionProtocol.swift in Sources */,
+				ED6EA41A1F7DDEE50011C820 /* URLSessionDataTaskProtocol.swift in Sources */,
 				EDD8F3541F7CF8F000E53527 /* ViewController.swift in Sources */,
-				EDD8F38B1F7D01A600E53527 /* URLSession+Ext.swift in Sources */,
 				EDD8F3521F7CF8F000E53527 /* AppDelegate.swift in Sources */,
 				EDD8F3831F7CF97B00E53527 /* HttpClient.swift in Sources */,
 				EDD8F3871F7CFF2B00E53527 /* MockURLSessionDataTask.swift in Sources */,
@@ -534,6 +534,7 @@
 				EDD8F37B1F7CF8F000E53527 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDD8F37C1F7CF8F000E53527 /* Build configuration list for PBXNativeTarget "NetworkUnitTestingTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +543,7 @@
 				EDD8F37E1F7CF8F000E53527 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDD8F37F1F7CF8F000E53527 /* Build configuration list for PBXNativeTarget "NetworkUnitTestingUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +552,7 @@
 				EDD8F3811F7CF8F000E53527 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

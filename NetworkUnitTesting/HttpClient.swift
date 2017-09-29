@@ -22,6 +22,7 @@ class HttpClient {
         let task = session.dataTask(with: request) { (data, response, error) in
             callback(data, error)
         }
+        URLSession
         task.resume()
     }
 }
